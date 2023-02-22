@@ -1,0 +1,10 @@
+<ul class="list-group list-group-flush todo-list">
+    <li *ngFor="let todo of todos">
+        <span [ngClass]="{'completed': todo.isCompleted}">{{todo.title}}</span>
+        <span class="btn btn-primary">{{todo.tags}}</span>
+        <span class="btn btn-primary">{{todo.category}}</span>
+        <span class="btn btn-primary">{{todo.targetDate}}</span>
+        <span><a [routerLink]="['/todo',todo.id]">Edit</a></span>
+    </li>
+
+</ul>

@@ -1,0 +1,13 @@
+.todo-list {
+    margin-bottom: 70px;
+}
+
+.todo-list .list-group-item {
+    text-align: right;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.completed{
+    text-decoration: line-through;
+}
