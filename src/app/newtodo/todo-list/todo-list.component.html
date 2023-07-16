@@ -1,0 +1,8 @@
+<ul class="list-group list-group-flush todo-list">
+    <li class="list-group-item" *ngFor="let todo of todos">
+        <span class="align-left badge rounded-pill" [ngClass]="{'bg-success':todo.isDone, 'bg-danger':!todo.isDone}">{{todo.task}}</span>
+        <span class="badge rounded-pill bg-primary">{{todo.date}}</span>
+        <span class="badge rounded-pill bg-primary">{{todo.category}}</span>
+        <span><a [routerLink]="['/todo', todo.id]">edit</a></span>
+    </li>
+</ul>

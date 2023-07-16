@@ -1,0 +1,31 @@
+{"mythings":[
+    {"id":1,
+    "task":"GetGrocerries",
+    "isDone":true,
+    "date":"jun/2023",
+    "category":"house"
+    },
+    {"id":2,
+    "task":"openoffice",
+    "isDone":true,
+    "date":"jul/2023",
+    "category":"office"
+    },
+    {"id":3,
+    "task":"play with kids",
+    "isDone":false,
+    "date":"jun/2023",
+    "category":"school"
+    },
+    {"id":4,
+    "task":"earn20k",
+    "isDone":false,
+    "date":"sep/2023",
+    "category":"house"
+    },
+    {"id":5,
+    "task":"savemoney",
+    "isDone":true,
+    "date":"Dec/2023",
+    "category":"house"
+    }]}

@@ -1,0 +1,28 @@
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <ngb-panel title="Architecture">
+      <ng-template ngbPanelContent>
+            Sample Architecture dummy content
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Components & Templates">
+        <ng-template ngbPanelContent>
+            <ul>
+            <li><a [routerLink]="['/components-templates/display-data-in-template']">Component with template</a></li>
+            <li><a [routerLink]="['/components-templates/display-data-in-template-url']">Component with template Url</a></li>
+            <li><a [routerLink]="['/components-templates/template-syntax']">template-syntax</a></li>
+
+
+            </ul>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="Observables & Rxjs">
+        <ng-template ngbPanelContent>
+              Sample Architecture dummy content
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="NgModules & DependencyInjection">
+        <ng-template ngbPanelContent>
+              Sample Architecture dummy content
+        </ng-template>
+      </ngb-panel>
+  </ngb-accordion>

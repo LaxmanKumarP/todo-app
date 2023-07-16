@@ -1,0 +1,13 @@
+h1{
+    font-style: italic;
+}
+
+h2{
+    color:blueviolet;
+    font-weight: 500px;
+}
+
+h2 span{
+    color:red;
+    font-weight: 300px;
+}

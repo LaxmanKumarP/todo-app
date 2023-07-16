@@ -1,0 +1,91 @@
+<h6>Interpolation Binding</h6>
+<p>My current Hero is: {{currentHero.name}}</p>
+<img id="Hero" src="{{heroImageUrl}}" alt="Hero" style="height: 50px;">
+<p>The sum of 1+1 is : {{1+1}}</p>
+<p>The sum of 1+1 is not : {{1+1+getVal()}}</p>
+<!--Script tag will be removed-->
+<script>alert('test')</script>
+<hr>
+<h6>Property Binding</h6>
+<img [src]="heroImageUrl" alt="Hero" style="height: 50px;">
+<br>
+<button [disabled]="formNotChanged">Cancel</button>
+<br><br>
+<div [ngClass]="classConditions">[ngClass] binding to the class property</div>
+<app-hero-detail [hero]="currentHero"></app-hero-detail>
+<button (click)="updateHero()">Update hero</button>
+<h6>Using Function calls in Bindings</h6>
+<img src="{{getHeroImage()}}" alt="Hero" style="height: 50px;">
+<img [src]="getHeroImage()" alt="Hero" style="height: 50px;">
+<h6>Script tags in property bindings</h6>
+<span>"{{evilTitle}}"</span>
+{{evilTitle}}
+<p [innerHtml]="evilTitle"></p>
+<br><br><br>
+<hr>
+<h6>Attribute, Class and Style Binding</h6>
+<br>
+<h6>Attribute Binding</h6>
+<input type="text" id="name" placeholder="Name" value="John">
+<br><br>
+<table class="table table-bordered text-center bdr">
+    <tr>
+        <td colspan="2">One</td>
+    </tr>
+    <tr>
+        <td class="bdr">Two</td>
+        <td class="bdr">Three</td>
+    </tr>
+</table>
+<br>
+<table class="table table-bordered text-center bdr">
+    <tr>
+        <!-- <td colspan="{{noOfColoumns}}">One</td> -->
+    </tr>
+    <tr>
+        <td class="bdr">Two</td>
+        <td class="bdr">Three</td>
+    </tr>
+</table>
+<br>
+<table class="table table-bordered text-center bdr">
+    <tr>
+        <td [attr.colspan]="noOfColoumns">One</td>
+    </tr>
+    <tr>
+        <td class="bdr">Two</td>
+        <td class="bdr">Three</td>
+    </tr>
+</table>
+<br>
+<h6>Class Binding</h6>
+<div>1. Reset/override all class names with a binding</div>
+<div class="bad curly special" [class]="badCurly">Bad Curly</div>
+<div>2. Toggle a single class</div>
+<div [class.special]="special">This is a special class</div>
+<div [class.special]="!special">This is not a special class</div>
+<div [class.very]="special" [class.special]="special">This is a very special class</div>
+<div class ="not" [class.very]="special" [class.special]="special">This is not a very special class</div>
+<div>2. Toggle multiple class(ngClass directive)</div>
+<div [ngClass]="classConditions">Multiple class bindings</div>
+<div [class]="classConditions">Multiple class bindings</div>
+<div class="another" [ngClass]="classConditions">Multiple class bindings doesnot override existing classes</div>
+<h6>Style Binding</h6>
+<button [style.color]="isSpecial?'green':'red'">Save</button>
+<button [style.background-color]="canSave?'cyan':'green'">save</button>
+<button [style.color]="isSpecial?'green':'red'" [style.background-color]="canSave?'cyan':'green'">save</button>
+<button [style.font-size.px]="isSpecial? 13:21">Big</button>
+<button [style.fontSize.px]="isSpecial? 13:21">CamelCased</button>
+<div [ngStyle]="currentStyles">Div with ngStyle directive</div>
+<br>
+<h6>Event Binding</h6>
+<button (click)="onSave($event)">Save</button>
+<button (click)="onSaving()">Save</button>
+<input type="text" (keypress)="onSave($event)">
+
+
+
+
+<br>
+<br><br><br><br>
+

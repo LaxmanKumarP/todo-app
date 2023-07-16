@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { AddEditTodoComponent } from './add-edit-todo/add-edit-todo.component';
-import { TodoService } from './todo.service';
+import { NewtodoService } from './newtodo.service';
 import { RouterModule } from '@angular/router';
 
 
@@ -16,10 +16,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule
   ],
-  providers:[TodoService],
-  exports: [
-    TodoListComponent,
-    AddEditTodoComponent
-  ]
+  providers:[NewtodoService],
+  exports: [TodoListComponent, AddEditTodoComponent]
 })
-export class TodoModule { }
+export class NewtodoModule { }
