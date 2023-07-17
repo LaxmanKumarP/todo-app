@@ -7,6 +7,7 @@ import { IndexComponent } from './index/index.component';
 import { DisplayDataInTemplateComponent } from './component-templates/component-templates/display-data-in-template/display-data-in-template.component';
 import { DisplayDataInTemplateUrlComponent } from './component-templates/component-templates/display-data-in-template-url/display-data-in-template-url.component';
 import { TemplateSyntaxComponent } from './component-templates/component-templates/template-syntax/template-syntax.component';
+import { CustomEventsComponent } from './component-templates/component-templates/custom-events/custom-events.component';
 // import { AddEditTodoComponent } from './todo/add-edit-todo/add-edit-todo.component';
 // import { TodoListComponent } from './todo/todo-list/todo-list.component';
 // import { TodoModule } from './todo/todo.module';
@@ -19,6 +20,7 @@ const routes: Routes = [
 {path:'components-templates/display-data-in-template', component:DisplayDataInTemplateComponent},
 {path:'components-templates/display-data-in-template-url', component:DisplayDataInTemplateUrlComponent},
 {path:'components-templates/template-syntax', component:TemplateSyntaxComponent},
+{path:'components-templates/template-syntax/custom-events', component:CustomEventsComponent},
 {path:'**', component:PageNotFoundComponent}
 ]; 
 
