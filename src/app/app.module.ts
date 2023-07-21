@@ -26,7 +26,7 @@ import { ComponentTemplatesModule } from './component-templates/component-templa
     HttpClientModule,
     NewtodoModule,
     NgbModule,
-    ComponentTemplatesModule
+    ComponentTemplatesModule,
   ],
   // exports:[ComponentTemplatesModule],
   providers: [],
