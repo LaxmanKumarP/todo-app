@@ -82,7 +82,45 @@
 <button (click)="onSave($event)">Save</button>
 <button (click)="onSaving()">Save</button>
 <input type="text" (keypress)="onSave($event)">
+<h6>Template expression operators</h6>
+<h6>Pipe Operator</h6>
+{{currentHero.name | uppercase}}
+{{currentHero | json}}
+<h6>Safe Navigation Operator</h6>
+<div>The null heros name is:{{nullHero?.name}}</div>
+<hr>
+<h6>Template Statements</h6>
+<div>Template Statements Allows Assignment Operator '='</div>
+<div>Hero name:{{currentHero.name}}</div>
+<div><button (click)="currentHero.name = 'david'">Save</button></div>
+<div>We can chain the Statements</div>
+<div><button (click)="currentHero.name = 'david'; onSave($event)">Save</button></div>
+<hr>
+<h6>Template referance variables (#hero)</h6>
+<form (ngSubmit)="onSubmit(heroForm)" #heroForm="ngForm">
+    <div class="form-group">
+        <label for="name">Phone: {{phone.value}}
+            <input class="form-control" name="phone" #phone required>
+        </label>
+    </div>
+    <div class="form-group">
+        <label for="">Name: {{name.value}}
+            <input class="form-control" name="name" #name="ngModel" minlength="4" required [(ngModel)]="currentHero.name">
+        </label>
+        <div><pre>{{name.errors | json}}</pre></div>
+        <div *ngIf="name.invalid">
+            <div *ngIf="name.errors?.['required']">
+                Name is Required
+            </div>
+            <div *ngIf="name.errors?.['minlength']">
+                Name should be morethan 4 characters
+            </div>
+        </div>
+    </div>
+    <pre>{{!heroForm.form.valid}}</pre>
+        <button type="submit" [disabled]="!heroForm.form.valid">Submit</button>
 
+</form>
 <br>
 <br><br><br><br>
 
