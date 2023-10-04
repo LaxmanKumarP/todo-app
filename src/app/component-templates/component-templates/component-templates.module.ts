@@ -10,6 +10,11 @@ import { HeroBioComponent } from './hero-bio/hero-bio.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FontSizerComponent } from './font-sizer/font-sizer.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
+import { HighlightDirective } from './attribute-directives/highlight.directive';
+import { HighligtV1Directive } from './attribute-directives/highligt-v1.directive';
+import { HighligtV2Directive } from './attribute-directives/highligt-v2.directive';
+import { HighligtV3Directive } from './attribute-directives/highligt-v3.directive';
 
 
 @NgModule({
@@ -22,7 +27,12 @@ import { FormsModule } from '@angular/forms';
     DisplayHeroComponent,
     HeroBioComponent,
     TwoWayBindingComponent,
-    FontSizerComponent
+    FontSizerComponent,
+    DirectivesComponent,
+    HighlightDirective,
+    HighligtV1Directive,
+    HighligtV2Directive,
+    HighligtV3Directive
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,26 @@
+<h6>Attribute Directives</h6>
+<br>
+<h6>App Highligt with static color</h6>
+<p appHighlight>Highlight Me!!!!!</p>
+<br>
+<h6>App Highlight V1 - Respond to user initiated events.</h6>
+<p appHighligtV1>Highlight Me!!!!!</p>
+<br>
+<h6>Pass values into directives with an @Input data binding</h6>
+<p appHighligtV2>Highlight color is not passed so it is highlighted by default color red</p>
+<p appHighligtV2 [highlightColor]="'orange'">Highlight Me!!!!!</p>
+<p appHighligtV2 highlightColor="Yellow">Highlight Me!!!!!</p>
+<p appHighligtV2 [highlightColor]="color">Highlight Me!!!!!</p>
+<br>
+<h6>App Highlight V3- Bind to an @Input alias</h6>
+<p appHighligtV3 [appHighligtV3]="color">Highlight me - used both property and directive name</p>
+<p [appHighligtV3]="color">Used Directive and property names together</p>
+<br>
+<hr>
+<p>Structural Directives</p>
+<br>
+<p>*ngIf :</p>
+<div *ngIf="currentHero">{{currentHero.name}}</div>
+<div [style.display]="currentHero ? 'block':'none'">{{currentHero.name}}</div>
+<div *ngIf="nullHero">{{nullHero}}</div>
+<div [style.display]="nullHero ? 'block': 'none'">{{nullHero}}</div>
