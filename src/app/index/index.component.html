@@ -1,27 +1,52 @@
 <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-    <ngb-panel title="Architecture">
-      <ng-template ngbPanelContent>
-            Sample Architecture dummy content
-      </ng-template>
-    </ngb-panel>
-    <ngb-panel title="Components & Templates">
-        <ng-template ngbPanelContent>
-            <ul>
+  <ngb-panel title="Architecture">
+    <ng-template ngbPanelContent>
+      Sample Architecture dummy content
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Components & Templates">
+    <ng-template ngbPanelContent>
+      <ul class="index-list">
+        <li class="heading">
+          <h6>1. Displaying Data</h6>
+          <ul class="nested-list">
             <li><a [routerLink]="['/components-templates/display-data-in-template']">Component with template</a></li>
-            <li><a [routerLink]="['/components-templates/display-data-in-template-url']">Component with template Url</a></li>
+            <li><a [routerLink]="['/components-templates/display-data-in-template-url']">Component with template Url</a>
+            </li>
+          </ul>
+        </li>
+        <li class="heading">
+          <h6>2. Template Syntax</h6>
+          <ul class="nested-list">
             <li><a [routerLink]="['/components-templates/template-syntax']">template-syntax</a></li>
             <li><a [routerLink]="['/components-templates/template-syntax/custom-events']">Custom Events</a></li>
-            </ul>
-        </ng-template>
-      </ngb-panel>
-      <ngb-panel title="Observables & Rxjs">
-        <ng-template ngbPanelContent>
-              Sample Architecture dummy content
-        </ng-template>
-      </ngb-panel>
-      <ngb-panel title="NgModules & DependencyInjection">
-        <ng-template ngbPanelContent>
-              Sample Architecture dummy content
-        </ng-template>
-      </ngb-panel>
-  </ngb-accordion>
+            <li><a [routerLink]="['/components-templates/template-syntax/two-way-binding']">Two-Way binding and NgModel</a></li>
+          </ul>
+        </li>
+        <li class="heading">
+          <h6>3. Directives</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/components-templates/directives']">Directives Examples</a></li>
+          </ul>
+        </li>
+        <li class="heading">
+          <h6>4. Component Interaction</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/components-templates/parent-child']">@Input is two-way</a></li>
+            <li><a [routerLink]="['/components-templates/component-interaction']">Component Interaction Examples</a></li>
+          </ul>
+        </li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Observables & Rxjs">
+    <ng-template ngbPanelContent>
+      Sample Architecture dummy content
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="NgModules & DependencyInjection">
+    <ng-template ngbPanelContent>
+      Sample Architecture dummy content
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

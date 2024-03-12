@@ -24,3 +24,56 @@
 <div [style.display]="currentHero ? 'block':'none'">{{currentHero.name}}</div>
 <div *ngIf="nullHero">{{nullHero}}</div>
 <div [style.display]="nullHero ? 'block': 'none'">{{nullHero}}</div>
+<br>
+<h6>*ngFor:</h6>
+<div>*ngFor with index:</div>
+<div *ngFor="let hero of heroes; let i = index">{{i+1}}-{{hero.name}}</div>
+<br>
+<h6>*ngFor without trackby:</h6>
+<div *ngFor="let hero of heroes">({{hero.id}}) {{hero.name}}</div>
+<br>
+<h6>*ngFor with trackby:</h6>
+<div *ngFor="let hero of heroes; trackBy:trackByHeroes">({{hero.id}}) {{hero.name}}</div>
+<br>
+<button class="btn btn-secondary" (click)="updateWithDifferentNames()">Update with Names</button> &nbsp;
+<button class="btn btn-secondary" (click)="updateWithDifferentIds()">Update with Ids</button>
+<br>
+<h6>ng-template</h6>
+<p>Hip</p>
+<ng-template>
+    <p>Hip</p>
+</ng-template>
+<p>Horray</p>
+<br>
+<h6>ng-container</h6>
+<p>I Turned the corner <span *ngIf="currentHero">and saw {{currentHero.name}}. I waved</span> 
+    and continued on my way. 
+</p>
+<br>
+<p>I Turned the corner <ng-container *ngIf="currentHero">and saw {{currentHero.name}}. I waved</ng-container> 
+    and continued on my way.
+</p>
+<br>
+<label>With out ng-container</label>
+<select [(ngModel)]="currentHero">
+    <option value="">Select Hero</option>
+    <span *ngFor="let h of heroes">
+        <span *ngIf="h.power > 3000">
+            <option value="">{{h.name}}</option>
+        </span>
+    </span>
+</select>
+<br>
+<label>With ng-container</label>
+<select [(ngModel)]="currentHero">
+    <option value="">Select Hero</option>
+    <ng-container *ngFor="let h of heroes">
+        <ng-container *ngIf="h.power > 3000">
+            <option [ngValue]="h">{{h.name}}</option>
+        </ng-container>
+    </ng-container>
+</select>
+<br>
+<h4>Custom Structural Directive: appReverseIf</h4>
+<p *appReverseIf= "condition">This Should be shown</p>
+<p *appReverseIf= "!condition">This Should be removed</p>

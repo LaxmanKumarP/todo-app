@@ -15,6 +15,10 @@ import { HighlightDirective } from './attribute-directives/highlight.directive';
 import { HighligtV1Directive } from './attribute-directives/highligt-v1.directive';
 import { HighligtV2Directive } from './attribute-directives/highligt-v2.directive';
 import { HighligtV3Directive } from './attribute-directives/highligt-v3.directive';
+import { ReverseIfDirective } from '../structural-directives/reverse-if.directive';
+import { ParentChildComponent } from './parent-child/parent-child.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { InteractionComponent } from './interaction/interaction.component';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { HighligtV3Directive } from './attribute-directives/highligt-v3.directiv
     HighlightDirective,
     HighligtV1Directive,
     HighligtV2Directive,
-    HighligtV3Directive
+    HighligtV3Directive,
+    ReverseIfDirective,
+    ParentChildComponent,
+    EditUserComponent,
+    InteractionComponent
   ],
   imports: [
     CommonModule,
