@@ -1,0 +1,14 @@
+.arrange {
+    border: 1px solid grey;
+    padding: 4PX;
+    display: flex;
+    align-items: center;
+}
+
+.cell-data{
+    border: 1px solid green;
+    width: 258px;
+    height: 80px;
+    display:inline-block;
+    margin:2px;
+}

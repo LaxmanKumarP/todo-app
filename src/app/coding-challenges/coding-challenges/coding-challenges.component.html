@@ -1,0 +1,4 @@
+<div class="row arrange" *ngFor="let row of arr">
+    <div  class="cell-data"  *ngFor="let cellBlk of cellData" [ngStyle]="{'background-color': row.includes(cellBlk)?'green':'white'}">
+        <span *ngIf="row.includes(cellBlk)">{{cellBlk}}</span></div>
+</div>

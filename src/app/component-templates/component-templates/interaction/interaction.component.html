@@ -1,1 +1,20 @@
-<p>interaction works!</p>
+<h6>Component Interaction</h6>
+<hr>
+<h6>Interact input propertey changes with a setter:</h6>
+<app-hero-name [name] ="currentHero.name"></app-hero-name>
+<br>
+<h6>Parent interacts with child via template referance variable</h6>
+<app-countdown-parent-with-temp-ref></app-countdown-parent-with-temp-ref>
+<br>
+<h6>Using @Viewchild:</h6>
+<app-countdown-parent-with-viewchild></app-countdown-parent-with-viewchild>
+<br>
+<h6>Using @ContentChild:</h6>
+<app-user-detail #details>
+    <div>User edit form starts</div>
+    <app-edit-user [user]= "details.user"></app-edit-user>
+    <div>User edit form ends</div>
+</app-user-detail>
+<br>
+<h6>Parent and child communicate via a service</h6>
+<app-simple-todo></app-simple-todo>

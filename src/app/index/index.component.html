@@ -1,7 +1,14 @@
 <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
   <ngb-panel title="Architecture">
     <ng-template ngbPanelContent>
-      Sample Architecture dummy content
+      <ul class="index-list">
+        <li class="heading">
+          <h6>1. Arranging Cells in grid </h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/coding-challenges']">Cell rendering</a></li>
+          </ul>
+        </li>
+      </ul>
     </ng-template>
   </ngb-panel>
   <ngb-panel title="Components & Templates">

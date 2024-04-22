@@ -19,6 +19,13 @@ import { ReverseIfDirective } from '../structural-directives/reverse-if.directiv
 import { ParentChildComponent } from './parent-child/parent-child.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { InteractionComponent } from './interaction/interaction.component';
+import { HeroNameComponent } from './hero-name/hero-name.component';
+import { CountdownParentWithTempRefComponent } from './countdown-parent-with-temp-ref/countdown-parent-with-temp-ref.component';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { CountdownParentWithViewchildComponent } from './countdown-parent-with-viewchild/countdown-parent-with-viewchild.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { SimpleTodoComponent } from './simple-todo/simple-todo.component';
+import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 
 
 @NgModule({
@@ -40,7 +47,14 @@ import { InteractionComponent } from './interaction/interaction.component';
     ReverseIfDirective,
     ParentChildComponent,
     EditUserComponent,
-    InteractionComponent
+    InteractionComponent,
+    HeroNameComponent,
+    CountdownParentWithTempRefComponent,
+    CountdownTimerComponent,
+    CountdownParentWithViewchildComponent,
+    UserDetailComponent,
+    SimpleTodoComponent,
+    TodoDetailComponent
   ],
   imports: [
     CommonModule,
