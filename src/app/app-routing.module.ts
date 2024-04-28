@@ -13,6 +13,8 @@ import { ParentChildComponent } from './component-templates/component-templates/
 import { DirectivesComponent } from './component-templates/component-templates/directives/directives.component';
 import { InteractionComponent } from './component-templates/component-templates/interaction/interaction.component';
 import { CodingChallengesComponent } from './coding-challenges/coding-challenges/coding-challenges.component';
+import { OldTodoListComponent } from './oldtodo/old-todo-list/old-todo-list.component';
+import { OldTodoEditComponent } from './oldtodo/old-todo-edit/old-todo-edit.component';
 // import { AddEditTodoComponent } from './todo/add-edit-todo/add-edit-todo.component';
 // import { TodoListComponent } from './todo/todo-list/todo-list.component';
 // import { TodoModule } from './todo/todo.module';
@@ -23,6 +25,8 @@ const routes: Routes = [
 {path:'',redirectTo:'todo',pathMatch:'full'},
 {path:'index', component:IndexComponent},
 {path:'coding-challenges', component:CodingChallengesComponent},
+{path:'oldtodo', component: OldTodoListComponent, data: {title: 'Todo Items'}},
+{path:'oldtodo/:id', component: OldTodoEditComponent},
 {path:'components-templates/display-data-in-template', component:DisplayDataInTemplateComponent},
 {path:'components-templates/display-data-in-template-url', component:DisplayDataInTemplateUrlComponent},
 {path:'components-templates/template-syntax', component:TemplateSyntaxComponent},

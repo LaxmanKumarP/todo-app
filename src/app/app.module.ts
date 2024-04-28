@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { IndexComponent } from './index/index.component';
 import { ComponentTemplatesModule } from './component-templates/component-templates/component-templates.module';
 import { CodingChallengesModule } from './coding-challenges/coding-challenges.module';
+import { OldtodoModule } from './oldtodo/oldtodo.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CodingChallengesModule } from './coding-challenges/coding-challenges.mo
     NewtodoModule,
     NgbModule,
     ComponentTemplatesModule,
-    CodingChallengesModule
+    CodingChallengesModule,
+    OldtodoModule
   ],
   // exports:[ComponentTemplatesModule],
   providers: [],

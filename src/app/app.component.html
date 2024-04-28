@@ -1,4 +1,4 @@
-<header class="fixed-top">
+<header class="fixed-top" *ngIf="true ; else todo">
     <div class="container">
         <div class="col-lg-12">
             <div class="row">
@@ -24,6 +24,34 @@
         </div>
     </div>
 </header>
+<ng-template #todo>
+    <header class="fixed-top">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h3>
+                            <a href="">Todos</a>
+                        </h3>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav>
+                            <ul class="nav nav-pills float-right">
+                                <li class="nav-item">
+                                    <a class="nav-link active" [routerLink]="['/index']">GO To Index</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" [routerLink]="['/index']">Back</a>
+                                </li>
+                            </ul>
+                        </nav>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</ng-template>
 <main class="container">
     <router-outlet></router-outlet>
 </main>
